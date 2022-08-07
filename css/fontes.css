@@ -1,0 +1,11 @@
+@font-face {
+	src: url(fontes/Fauna_One/FaunaOne-Regular.ttf);
+	font-family: 'Fauna One';
+	font-weight: normal;
+}
+
+@font-face {
+	src: url(fontes/Playfair_Display/PlayfairDisplay-Regular.ttf);
+	font-family: 'Playfair Display';
+	font-weight: normal;
+}
