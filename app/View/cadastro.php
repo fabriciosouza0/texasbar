@@ -13,7 +13,7 @@
 		body {
 			background: url(arquivos/banner.jpg) center no-repeat;
 			background-size: cover;
-			background-attachment: fixed;
+			background-attachment: fixed
 		}
 
         #cad-user {
