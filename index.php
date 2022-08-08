@@ -8,5 +8,3 @@ $url = $_GET;
 
 $core = new Core;
 $content = $core->start($url);
-
-echo $content;

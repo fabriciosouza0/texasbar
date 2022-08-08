@@ -6,18 +6,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000">
-    <base href="https://localhost/texasbar">
+    <base href="https://localhost/texasbar/">
 
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/structure.css">
+    <link href="css/fontes.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/lib/View/style/fontes/fontes.css" />
+    <link rel="stylesheet" href="app/View/style/reset.css">
+    <link rel="stylesheet" href="app/View/style/structure.css">
     <title>{% block titulo %}{% endblock %}</title>
+
 </head>
 
-<body>
-    {% block content %}
-    {% endblock %}
+<body class="bg-dark">
+    <header class="container-fluid" id="header">
+
+    </header>
+    <nav class="navbar navbar-rigth navbar-expand-lg navbar-dark fixed-top shadow-b" style="background: #333;">
+        <a class="navbar-brand" href="#">
+            <img src="arquivos/brand.png" width="50px" height="45px" alt="" />
+            <span id="brand-text">O melhor restaurante
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="adm/pedidos.php">Pedidos<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Produtos</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="adm/cadastro-produto.php">Cadastrar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="adm/produtos.php">Listar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Clientes</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="adm/cadastrar-cliente.php">Cadastrar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="adm/clientes.php">Listar</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block conteudo %}{% endblock %}
+
+    <footer class="container-fluid" id="footer">
+        <div class="container" id="footer-content">
+            <div class="mapasite">
+                <div class="row" style="font-family: 'Playfair Display', serif;">
+                    <div class="col-md-3" id="local">
+                        <span class="small-title" style="color: #fff">Localidade</span>
+                        <p>Não possuimos endereço físico</p>
+                        <p>(88) 8107-1542</p>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="small-title" style="color: #fff">Como fazer pedidos</span>
+                        <p>1 - Cadastre-se</p>
+                        <p>2 - Faça log-in</p>
+                        <p>3 - Faça seu pedido</p>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="small-title" style="color: #fff">Entragamos bebidas</span>
+                        <p>Sim, fazemos entregas de bebidas</p>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="small-title" style="color: #fff">Não se preocupe</span>
+                        <p>Caso aja algum engano entre em contado com o número abaixo</p>
+                        <p>(88) 8107-1542</p>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+                <div id="division">
+                    <img src="arquivos/mail-icon.png" width="45" height="45" />
+                </div>
+            </center>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p align="center" class="small-title">Assine nossa newslleter para receber novidades !</p>
+                </div>
+                <div class="col-md-12">
+                    <form class="form-newslleter" action="" method="POST">
+                        <div class="form-n">
+                            <input type="email" class="form-c" id="staticEmail2" placeholder="Seu e-mail">
+                        </div>
+                        <div class="form-n">
+                            <input type="text" class="form-c" id="inputPassword2" placeholder="Seu nome">
+                        </div>
+                        <button type="submit" class="circle-btn" id="circle">Ok</button>
+                    </form>
+                </div>
+            </div>
+
+            <center>
+                <div class="copyrigth">
+                    <p>
+                        Todos os direitos reservados - <a class="link" href="">Fabricio Souza</a>
+                    </p>
+                </div>
+            </center>
+
+        </div>
+    </footer>
+
+    <div class="modal-container" id="log_cad">
+        <div class="modal-window">
+            <div class="close-n">X</div>
+            <div class="row">
+
+                <div class="col-md-12" id="login">
+                    <div class="big-title" style="padding-bottom: 30px;">
+                        Login
+
+                    </div>
+                    <form action="" method="POST" class="form-newslleter inline-f" style="left: 50%;">
+                        <div class="form-n">
+                            <label for="email">E-mail</label>
+                            <input class="form-c" type="email" id="email" name="login"
+                                placeholder="Exemplo: valdir@gmail.com" />
+                        </div>
+                        <div class="form-n">
+                            <label for="senha">Senha</label>
+                            <input class="form-c" type="password" id="senha" name="senha"
+                                placeholder="Senha de login" />
+                        </div>
+                        <center style="padding: 10px;">
+                            <button type="submit" class="circle-btn" style="border-radius: 5px;">Log-in</button>
+                        </center>
+                        <center style="padding: 10px;">
+                            <a href="cadastro.php" id="cad-link">Ou cadastre-se</a>
+                        </center>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 
+<script type="text/javascript" src="app/lib/js/jquery.js"></script>
+<script type="text/javascript" src="app/lib/bootstrap/js/bootstrap.min.js"></script>
 {% block script %}
 {% endblock %}
 

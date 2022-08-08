@@ -1,0 +1,65 @@
+{% extends 'structure/structure.html' %}
+
+{% block titulo %}{{titulo}}{% endblock %}
+
+{% block conteudo %}
+<div class="container" id="main">
+    <div class="big-title">
+        Nosso cardápio
+    </div>
+    <div class="row m-70">
+        <div class="col-md-6" data-anime="top">
+            <p class="text-medium">
+                Temos uma ampla variedade de pratos e bebidas para satisfazer qualquer um. Venha desfrutar desse
+                sabor e tormar uma boa cerveja com a gente.
+            </p>
+            <center>
+                <button class="circle-btn text-medium" style="border-radius: 5px; margin-bottom: 10px;">
+                    Ler mais
+                </button>
+            </center>
+        </div>
+        <div class="col-md-6" data-anime="top">
+            <img src="arquivos/banner.jpg" width="100%" draggable="false" />
+        </div>
+    </div>
+    <div class="big-title">
+        Localização
+    </div>
+    <div class="row m-70">
+        <div class="col-md-6" data-anime="top">
+            <img src="arquivos/banner.jpg" width="100%" draggable="false" />
+        </div>
+        <div class="col-md-6" data-anime="top">
+            <p class="text-medium">
+                Não possuimos endereço físico, mas fazemos entregas na região e garantimos a melhor qualidade
+                possível.
+            </p>
+            <center>
+                <button class="circle-btn text-medium" style="border-radius: 5px;">
+                    Ler mais
+                </button>
+            </center>
+        </div>
+    </div>
+    <div class="big-title">
+        Nosso Chefe
+    </div>
+    <div class="row m-70" style="margin-bottom: 55px;">
+        <div class="col-md-6" data-anime="top">
+            <p class="text-medium">
+                Nosso chefe possuí vasta experiência na culinária local, e garante que seus pratos vão te fazer
+                pedir replay!
+            </p>
+            <center>
+                <button class="circle-btn text-medium" style="border-radius: 5px; margin-bottom: 10px;">
+                    Ler mais
+                </button>
+            </center>
+        </div>
+        <div class="col-md-6" data-anime="top">
+            <img src="arquivos/banner.jpg" width="100%" draggable="false" />
+        </div>
+    </div>
+</div>
+{% endblock %}
